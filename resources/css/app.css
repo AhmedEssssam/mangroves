@@ -897,6 +897,7 @@ footer .copyright {
     .restoration {
 
         background: linear-gradient(270deg, #0E2721 0%, #051614 100%);
+        padding-bottom: 0 !important;
     }
 
     .restoration .tab-content {
@@ -924,7 +925,9 @@ footer .copyright {
     .technology .stack .content .lead {
         width: 100%;
     }
-
+    .why-mangrove .box p {
+        padding: 36px;
+    }
     .why-mangrove .measurable {
         padding-left: 0;
         padding-bottom: 0;

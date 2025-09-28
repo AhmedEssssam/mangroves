@@ -178,7 +178,7 @@
                     Download Our Profile
                     <img src="{{ asset('icons/arrow.png') }}" alt="arrow" class="ms-1">
                 </a>
-                <a href="{{ url('/#contact') }}" class="btn btn-lg btn-dark ms-3">
+                <a href="{{ url('/#contact') }}" class="btn btn-lg btn-dark">
                     Get Free Consultation
                     <img src="{{ asset('icons/arrow_white.png') }}" alt="arrow" class="ms-1">
                 </a>
