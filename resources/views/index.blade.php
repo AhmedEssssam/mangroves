@@ -763,7 +763,7 @@
                     <p class="point"><span class="me-1">•</span>Job creation in coastal communities through green
                         employment</p>
                     <a href="{{ asset('docs/mangrove oases company profile.pdf') }}" target="_blank"
-                        class="btn btn-lg btn-primary d-block w-100" style="margin-top: 24px">
+                        class="btn btn-lg btn-primary" style="margin-top: 24px">
                         Download Our Profile
                         <img src="{{ asset('icons/arrow.png') }}" alt="arrow" class = "ms-1">
                     </a>

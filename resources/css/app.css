@@ -926,6 +926,11 @@ footer .copyright {
     .technology .stack .content .lead {
         width: 100%;
     }
+    .technology .stack a.btn {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
     .why-mangrove .box p {
         padding: 36px;
     }
