@@ -663,7 +663,7 @@
                     </div>
                 </div>
             </div>
-            <div class="action d-flex justify-content-center">
+            <div class="action d-flex justify-content-center align-items-center">
                 <button class="btn btn-lg btn-dark">
                     See More
                     <img src="{{ asset('icons/arrow-down.svg') }}" alt="arrow" class = "ms-1">
@@ -758,10 +758,10 @@
                     </p>
                     <p class="point"><span class="me-1">•</span>Job creation in coastal communities through green
                         employment</p>
-                    <button class="btn btn-lg btn-primary">
+                    <a href="{{ asset('docs/mangrove oases company profile.pdf') }}" target="_blank" class="btn btn-lg btn-primary">
                         Download Our Profile
                         <img src="{{ asset('icons/arrow.png') }}" alt="arrow" class = "ms-1">
-                    </button>
+                    </a>
                 </div>
             </div>
             <div class="d-sm-block d-xs-block d-lg-none d-md-none">
@@ -785,9 +785,9 @@
                 <form action="{{ route('contact.send') }}" method="POST">
                     @csrf
 
-                    <div class="row" style="margin-bottom: 38px">
+                    <div class="row">
                         <div class="col-md-6">
-                            <div class="item">
+                            <div class="item"  style="margin-bottom: 24px">
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" name = "name" class="form-control input-lg" id="name"
                                     placeholder="Your Name" required>
@@ -797,7 +797,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="item">
+                            <div class="item"  style="margin-bottom: 24px">
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control input-lg" name="email" id="name"
                                     placeholder="example@gmail.com" required>
@@ -809,7 +809,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="item position-relative" style="margin-bottom: 38px">
+                            <div class="item position-relative" style="margin-bottom: 24px">
                                 <label for="project_type" class="form-label">Project Type</label>
                                 <select name="project_type" id="project_type" class="form-control" required>
                                     <option value="Mangrove Restoration">Mangrove Restoration</option>
@@ -827,7 +827,7 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <div class="item" style="margin-bottom: 32px">
+                            <div class="item" style="margin-bottom: 24px">
                                 <label for="message" class="form-label">Message</label>
                                 <textarea name="message" id="message" cols="30" rows="6" class="form-control"
                                     placeholder="Tell Us about your Project.." required></textarea>

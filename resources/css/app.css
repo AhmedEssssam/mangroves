@@ -219,6 +219,10 @@ body {
     margin-right: 10px;
 }
 
+.categories .service-card p {
+    font-size: 20px !important;
+}
+
 .categories .service-card .icon {
     display: flex;
     width: 46px;
@@ -324,10 +328,6 @@ body {
     text-decoration: none;
     color: var(--text-icons-t-green, #05DF72);
     font-size: 20px;
-}
-
-.services h3 {
-    font-size: 21px;
 }
 
 .services .service-card {
@@ -648,7 +648,7 @@ body {
 }
 
 .technology .stack {
-    background: url(http://[::1]:5173/public/images/stack.png);
+    background: url('../../public/images/stack.png');
     margin-bottom: 112px;
     background-size: cover;
     border-radius: 16px;
@@ -807,7 +807,6 @@ footer .connect h5 {
 
 footer .connect p {
     opacity: 0.7;
-    margin-bottom: 8px !important;
 }
 
 footer .connect .social-icons {
@@ -880,14 +879,19 @@ footer .copyright {
 }
 
 @media(max-width: 991px) {
-    button.btn {
-        font-size: 14px;
+    .btn {
+        font-size: 14px !important;
         height: 44px;
     }
 
     p.lead {
         font-size: 14px;
 
+    }
+
+    .projects .lead,
+    .contact .lead {
+        font-size: 14px !important;
     }
 
     .restoration {
@@ -987,8 +991,12 @@ footer .copyright {
     .projects .btn {
         display: block;
         width: 100%;
+        padding: 12px 20px !important;
     }
 
+    .categories .service-card p {
+        font-size: 14px !important;
+    }
 
     .categories::before,
     .categories::after {
