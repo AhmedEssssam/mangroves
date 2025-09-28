@@ -21,15 +21,15 @@
                         <li class="text-secondary">4IR tech stack: drones, AI, IoT sensors, GHG monitoring</li>
                     </ul>
                     <div class="d-flex align-items-center">
-                        <button class="btn btn-lg btn-primary">
+                        <a href="{{ url('/#contact') }}" class="btn btn-lg btn-primary">
                             Get Free Consultation
                             <img src="{{ asset('icons/arrow.png') }}" alt="arrow" class = "ms-1">
-                        </button>
-                        <button class="btn btn-lg btn-dark">
+                        </a>
+                        <a href="{{ url('/#services') }}" class="btn btn-lg btn-dark">
                             Explore Our Services
                             <img src="{{ asset('icons/arrow_white.png') }}" alt="arrow" class = "ms-1">
 
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-6 hero-bg">
@@ -39,7 +39,7 @@
         </div>
     </section>
     <section class="categories">
-        <div class="container">
+        <div class="container-fluid">
             <div class="text-center mb-4">
                 <h3>Our Services</h3>
             </div>
@@ -149,31 +149,40 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <img src="{{ asset('images/about.png') }}" alt="about" class="img-about">
             <h3 class="fw-bold">About Mangrove Oasis</h3>
-            <p class="lead">
-                The company was founded with the aim of contributing to the goals of Saudi Vision 2030 and the Green Saudi
-                Initiative. The Kingdom of Saudi Arabia targets planting over 100 million mangrove trees in the coming years
-                as part of Vision 2030 goals. Mangrove trees are distinguished by their ability to absorb and store carbon
-                from the atmosphere deep in their soil for decades, with the major advantage of being able to store 10 times
-                the amount of carbon..
-            </p>
-            <div class="d-flex align-items-center justify-content-center">
-                <button class="btn btn-lg btn-primary">
-                    Download Our Profile
-                    <img src="{{ asset('icons/arrow.png') }}" alt="arrow" class = "ms-1">
-                </button>
-                <button class="btn btn-lg btn-dark">
-                    Get Free Consultation
-                    <img src="{{ asset('icons/arrow_white.png') }}" alt="arrow" class = "ms-1">
+            <div class="lead text-toggle">
+                <p class="lead d-inline" id = "aboutText">
 
-                </button>
+                    The company was founded with the aim of contributing to the goals of Saudi Vision 2030 and the Green Saudi
+                    Initiative. The Kingdom of Saudi Arabia targets planting over 100 million mangrove trees in the coming years
+                    as part of Vision 2030 goals. Mangrove trees are distinguished by their ability to absorb and store carbon
+                    from the atmosphere deep in their soil for decades, with the major advantage of being able to store 10 times
+                    the amount of carbon..
+                </p>
+                <button class="btn btn-default no-effect p-0" id="toggleBtn" onclick="toggleText()">See more</button>
+            </div>
+
+
+
+
+            <div class="d-flex align-items-center justify-content-center mt-4">
+                <a href="{{ asset('docs/mangrove oases company profile.pdf') }}" target="_blank"
+                    class="btn btn-lg btn-primary">
+                    Download Our Profile
+                    <img src="{{ asset('icons/arrow.png') }}" alt="arrow" class="ms-1">
+                </a>
+                <a href="{{ url('/#contact') }}" class="btn btn-lg btn-dark ms-3">
+                    Get Free Consultation
+                    <img src="{{ asset('icons/arrow_white.png') }}" alt="arrow" class="ms-1">
+                </a>
             </div>
         </div>
     </section>
-    <section class="services">
+
+    <section class="services" id="services">
         <div class="container">
             <div class="text-center">
                 <h3 class="service-heading">9 Integrated Services for Complete Environmental Solutions</h3>
@@ -511,18 +520,28 @@
                 </div>
 
             </div>
-            <div class="measurable">
-                <h4>Measurable Environmental Impact</h4>
-                <p class="point"><span class="me-1">•</span>Coastal protection reducing wave energy by up to 70%</p>
-                <p class="point"><span class="me-1">•</span>Fisheries productivity increases of 25-50% in restored
-                    areas</p>
-                <p class="point"><span class="me-1">•</span>Water quality improvement through natural filtration</p>
-                <p class="point"><span class="me-1">•</span>Job creation in coastal communities through green
-                    employment</p>
+            <div class="measurable position-relative">
+                <div class="overlay"></div>
+                <div class="content">
+
+                    <h4>Measurable Environmental Impact</h4>
+                    <p class="point"><span class="me-1">•</span>Coastal protection reducing wave energy by up to 70%
+                    </p>
+                    <p class="point"><span class="me-1">•</span>Fisheries productivity increases of 25-50% in restored
+                        areas</p>
+                    <p class="point"><span class="me-1">•</span>Water quality improvement through natural filtration
+                    </p>
+                    <p class="point"><span class="me-1">•</span>Job creation in coastal communities through green
+                        employment</p>
+                </div>
+                <div class="d-sm-block d-xs-block d-lg-none d-md-none">
+                    <img src="{{ asset('images/measurable_sm.png') }}" alt="" class="w-100"
+                        id="restoration_img">
+                </div>
             </div>
         </div>
     </section>
-    <section class="projects">
+    <section class="projects" id="projects">
         <div class="container">
             <div class="text-center">
                 <h3>Projects & Impact Stories</h3>
@@ -653,7 +672,7 @@
             </div>
         </div>
     </section>
-    <section class="technology">
+    <section class="technology" id="technology">
         <div class="container">
             <div class="text-center">
 
@@ -751,7 +770,7 @@
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="container">
             <div class="text-center">
 
@@ -763,43 +782,66 @@
                 </p>
             </div>
             <div class="contact-card">
-                <form>
+                <form action="{{ route('contact.send') }}" method="POST">
+                    @csrf
+
                     <div class="row" style="margin-bottom: 38px">
                         <div class="col-md-6">
                             <div class="item">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control input-lg" id="name"
-                                    placeholder="Your Name">
+                                <input type="text" name = "name" class="form-control input-lg" id="name"
+                                    placeholder="Your Name" required>
+                                @error('name')
+                                    <p class="text-danger form-text">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="item">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control input-lg" id="name"
-                                    placeholder="example@gmail.com">
+                                <input type="email" class="form-control input-lg" name="email" id="name"
+                                    placeholder="example@gmail.com" required>
+                                @error('email')
+                                    <p class="text-danger form-text">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="item" style="margin-bottom: 38px">
+                            <div class="item position-relative" style="margin-bottom: 38px">
                                 <label for="project_type" class="form-label">Project Type</label>
-                                <select name="project_type" id="project_type" class="form-control">
+                                <select name="project_type" id="project_type" class="form-control" required>
                                     <option value="Mangrove Restoration">Mangrove Restoration</option>
                                     <option value="Softscape Design">Softscape Design</option>
                                     <option value="Environmental Consulting">Environmental Consulting</option>
                                     <option value="Technology Solutions">Technology Solutions</option>
                                 </select>
+                                <span class="icon-abs">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12"
+                                        viewBox="0 0 8 12" fill="none">
+                                        <path d="M1 1L6 6L1 11" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </span>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="item" style="margin-bottom: 32px">
                                 <label for="message" class="form-label">Message</label>
                                 <textarea name="message" id="message" cols="30" rows="6" class="form-control"
-                                    placeholder="Tell Us about your Project.."></textarea>
+                                    placeholder="Tell Us about your Project.." required></textarea>
+                                @error('message')
+                                    <p class="text-danger form-text">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
                     </div>
+                    @if (session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
                     <button class="btn btn-lg btn-primary d-block w-100">
                         Send Message
                         <img src="{{ asset('icons/arrow.png') }}" alt="arrow" class = "ms-1">
@@ -869,6 +911,28 @@
 
                 document.querySelector('#restoration_img').src = imageMobilePath;
 
+            }
+        }
+
+        function toggleText() {
+            const text = document.getElementById('aboutText');
+            const btn = document.getElementById('toggleBtn');
+
+            text.classList.toggle('expanded');
+
+            if (text.classList.contains('expanded')) {
+                text.textContent = `
+                The company was founded with the aim of contributing to the goals of Saudi Vision 2030 and the Green Saudi Initiative. The Kingdom of Saudi Arabia targets planting over 100 million mangrove trees in the coming years as part of Vision 2030 goals. Mangrove trees are distinguished by their ability to absorb and store carbon from the atmosphere deep in their soil for decades, with the major advantage of being able to store 10 times the amount of carbon compared to other types of forest trees. Mangrove forests also serve as suitable nurseries for fish, crustaceans, and mollusks, protect coasts from erosion and hurricanes, improve water quality, and enhance biodiversity and ecological balance, making them economically viable and important for local communities. The trees also produce mangrove honey
+                `;
+                btn.textContent = 'See less';
+            } else {
+                text.textContent = `
+                                The company was founded with the aim of contributing to the goals of Saudi Vision 2030 and the Green Saudi
+                Initiative. The Kingdom of Saudi Arabia targets planting over 100 million mangrove trees in the coming years
+                as part of Vision 2030 goals. Mangrove trees are distinguished by their ability to absorb and store carbon
+                from the atmosphere deep in their soil for decades, with the major advantage of being able to store 10 times
+                the amount of carbon..`;
+                btn.textContent = 'See more';
             }
         }
     </script>

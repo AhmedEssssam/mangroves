@@ -10,17 +10,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle" href="javascript:;" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Services
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="{{ url('/#services') }}">
                                 <img src="{{ asset('icons/tree.png') }}" alt="Tree" width="14">
                                 <span>
                                     Mangrove Restoration
@@ -28,7 +28,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="{{ url('/#services') }}">
                                 <img src="{{ asset('icons/nurseries.png') }}" alt="Tree" width="14">
                                 <span>
                                     Nurseries & Seedlings
@@ -36,7 +36,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="{{ url('/#services') }}">
                                 <img src="{{ asset('icons/categories/cat_1.png') }}" alt="Tree" width="14">
                                 <span>
                                     Softscape Design
@@ -44,7 +44,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="{{ url('/#services') }}">
                                 <img src="{{ asset('icons/categories/cat_2.png') }}" alt="Tree" width="14">
                                 <span>
                                     Smart Irrigation
@@ -52,7 +52,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="{{ url('/#services') }}">
                                 <img src="{{ asset('icons/categories/cat_3.png') }}" alt="Tree" width="14">
                                 <span>
                                     Architecture & Finishes
@@ -60,7 +60,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="{{ url('/#services') }}">
                                 <img src="{{ asset('icons/categories/cat_4.png') }}" alt="Tree" width="14">
                                 <span>
                                     Interior & Exterior Finishes
@@ -68,7 +68,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="{{ url('/#services') }}">
                                 <img src="{{ asset('icons/categories/cat_5.png') }}" alt="Tree" width="14">
                                 <span>
                                     Maintenance
@@ -76,7 +76,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="{{ url('/#services') }}">
                                 <img src="{{ asset('icons/fitness.png') }}" alt="Tree" width="14">
                                 <span>
                                     Play & Fitness
@@ -84,7 +84,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="{{ url('/#services') }}">
                                 <img src="{{ asset('icons/env.png') }}" alt="Tree" width="14">
                                 <span>
                                     Environmental Consulting
@@ -94,21 +94,21 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Projects</a>
+                    <a class="nav-link" href="{{ url('/#projects') }}">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="{{ url('/#about') }}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="{{ url('/#contact') }}">Contact</a>
                 </li>
 
 
             </ul>
-            <button class="btn btn-primary">
+            <a href = "{{ url('/#contact') }}" class="btn btn-primary">
                 <img src="{{ asset('icons/ellipse.png') }}" alt="ellipse" class = "me-2">
                 Get Consultation
-            </button>
+            </a>
         </div>
     </div>
 </nav>
