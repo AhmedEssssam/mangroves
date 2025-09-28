@@ -915,6 +915,7 @@ footer .copyright {
 
     .technology .stack {
         background: #150904;
+        padding: 12px;
     }
 
     .technology .stack .content {
