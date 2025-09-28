@@ -156,10 +156,14 @@
             <div class="lead text-toggle">
                 <p class="lead d-inline" id = "aboutText">
 
-                    The company was founded with the aim of contributing to the goals of Saudi Vision 2030 and the Green Saudi
-                    Initiative. The Kingdom of Saudi Arabia targets planting over 100 million mangrove trees in the coming years
-                    as part of Vision 2030 goals. Mangrove trees are distinguished by their ability to absorb and store carbon
-                    from the atmosphere deep in their soil for decades, with the major advantage of being able to store 10 times
+                    The company was founded with the aim of contributing to the goals of Saudi Vision 2030 and the Green
+                    Saudi
+                    Initiative. The Kingdom of Saudi Arabia targets planting over 100 million mangrove trees in the coming
+                    years
+                    as part of Vision 2030 goals. Mangrove trees are distinguished by their ability to absorb and store
+                    carbon
+                    from the atmosphere deep in their soil for decades, with the major advantage of being able to store 10
+                    times
                     the amount of carbon..
                 </p>
                 <button class="btn btn-default no-effect p-0" id="toggleBtn" onclick="toggleText()">See more</button>
@@ -741,8 +745,8 @@
                 </div>
             </div>
         </div>
-        <div class="stack">
-            <div class="container">
+        <div class="container">
+            <div class="stack">
 
                 <div class="content">
                     <h4>Integrated Technology Stack</h4>
@@ -758,15 +762,16 @@
                     </p>
                     <p class="point"><span class="me-1">•</span>Job creation in coastal communities through green
                         employment</p>
-                    <a href="{{ asset('docs/mangrove oases company profile.pdf') }}" target="_blank" class="btn btn-lg btn-primary">
+                    <a href="{{ asset('docs/mangrove oases company profile.pdf') }}" target="_blank"
+                        class="btn btn-lg btn-primary" style="margin-top: 24px">
                         Download Our Profile
                         <img src="{{ asset('icons/arrow.png') }}" alt="arrow" class = "ms-1">
                     </a>
                 </div>
-            </div>
-            <div class="d-sm-block d-xs-block d-lg-none d-md-none">
-                <img src="{{ asset('images/measurable_stack_sm.png') }}" alt="" class="w-100"
-                    id="restoration_img">
+                <div class="d-sm-block d-xs-block d-lg-none d-md-none">
+                    <img src="{{ asset('images/measurable_stack_sm.png') }}" alt="" class="w-100"
+                        id="restoration_img">
+                </div>
             </div>
         </div>
     </section>
@@ -787,7 +792,7 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="item"  style="margin-bottom: 24px">
+                            <div class="item" style="margin-bottom: 24px">
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" name = "name" class="form-control input-lg" id="name"
                                     placeholder="Your Name" required>
@@ -797,7 +802,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="item"  style="margin-bottom: 24px">
+                            <div class="item" style="margin-bottom: 24px">
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control input-lg" name="email" id="name"
                                     placeholder="example@gmail.com" required>
